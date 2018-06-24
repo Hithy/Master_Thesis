@@ -1,0 +1,18 @@
+syntax = "proto3";
+message RequestMessage
+{
+    int32 type = 1;
+    int64 offset = 2;
+    bytes content =3;
+    int64 size = 4;
+}
+
+message ResponseRead
+{
+    string content = 1;
+}
+
+message ResponseWrite
+{
+    int64 writenum = 1;
+}
